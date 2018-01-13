@@ -40,8 +40,8 @@ class ANRRecordViewModel: BaseRecordViewModel {
 
     private func mainThreadBacktraceString() -> NSAttributedString {
         let result = NSMutableAttributedString(attributedString: self.contentString(with: "MainThread Backtrace", content: self.model.mainThreadBacktrace, newline: true))
-        let range = result.string.range(of: self.model.mainThreadBacktrace!)
-        if range != nil {
+        let range = (result.string as NSString).range(of: self.model.mainThreadBacktrace!)
+        if range.location != NSNotFound  {
             let att = [NSFontAttributeName: UIFont(name: "Courier", size: 6)!,
                 NSForegroundColorAttributeName: UIColor.white] as [String: Any]
             result.setAttributes(att, range: range)
@@ -53,12 +53,11 @@ class ANRRecordViewModel: BaseRecordViewModel {
 
     private func allThreadBacktraceString() -> NSAttributedString {
         let result = NSMutableAttributedString(attributedString: self.contentString(with: "AllThread Backtrace", content: self.model.allThreadBacktrace, newline: true))
-        let range = result.string.range(of: self.model.allThreadBacktrace!)
-        if range != nil {
+        let range = (result.string as NSString).range(of: self.model.allThreadBacktrace!)
+        if range.location != NSNotFound {
             let att = [NSFontAttributeName: UIFont(name: "Courier", size: 6)!,
                 NSForegroundColorAttributeName: UIColor.white] as [String: Any]
             result.setAttributes(att, range: range)
-
         }
         return result
 

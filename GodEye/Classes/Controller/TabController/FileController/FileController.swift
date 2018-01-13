@@ -71,7 +71,7 @@ extension FileController: UITableViewDataSource, UITableViewDelegate {
         var url: URL?
         if indexPath.row == 0 {
             let first = NSSearchPathForDirectoriesInDomains(.applicationDirectory, .userDomainMask, true).first
-            let str = (first as NSString).deletingLastPathComponent
+            let str = (first as! NSString).deletingLastPathComponent
             url = URL(string: str)
         } else if indexPath.row == 1 {
             url = URL(string: Bundle.main.bundlePath)

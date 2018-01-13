@@ -45,7 +45,7 @@ class LogRecordViewModel: BaseRecordViewModel {
         
         var content: String = "[\(file): \(line)](\(function)) \(date) -> \(thread)"
         let result = NSMutableAttributedString(attributedString: self.contentString(with: nil, content: content))
-        let  range = result.string.NS.range(of: content)
+        let  range = (result.string as NSString).range(of: content)
         if range.location != NSNotFound {
             let att = [NSFontAttributeName:UIFont(name: "Courier", size: 10)!,
                        NSForegroundColorAttributeName:UIColor.white] as [String : Any]
