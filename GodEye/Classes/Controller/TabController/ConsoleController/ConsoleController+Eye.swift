@@ -26,7 +26,7 @@ extension ConsoleController {
         if defaultSwitch.crash { EyesManager.shared.openCrashEye() }
         if defaultSwitch.network { EyesManager.shared.openNetworkEye() }
         if defaultSwitch.anr { EyesManager.shared.openANREye() }
-        if defaultSwitch.leak { EyesManager.shared.openLeakEye() }
+//        if defaultSwitch.leak { EyesManager.shared.openLeakEye() }
     }
     
     func addRecord(model:RecordORMProtocol) {

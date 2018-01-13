@@ -70,7 +70,7 @@ extension GodEyeController {
             UIView.setAnimationDelegate(self)
             UIView.setAnimationDidStop(#selector(GodEyeController.consoleShown))
             self.view.frame = UIScreen.onscreenFrame()
-            self.view.transform = self.viewTransform()
+//            self.view.transform = self.viewTransform()
             UIView.commitAnimations()
         }
     }

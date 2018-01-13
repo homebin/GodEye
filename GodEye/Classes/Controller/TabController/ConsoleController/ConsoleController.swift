@@ -51,7 +51,7 @@ class ConsoleController: UIViewController {
         section1.append(RecordType.crash)
         section1.append(RecordType.network)
         section1.append(RecordType.anr)
-        section1.append(RecordType.leak)
+//        section1.append(RecordType.leak)
         new.append(section1)
         
         var section2 = [RecordType]()
