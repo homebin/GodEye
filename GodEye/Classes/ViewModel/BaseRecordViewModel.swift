@@ -18,8 +18,8 @@ class BaseRecordViewModel: NSObject {
         let line = newline == true ? "\n" : (pre == "" ? "" : " ")
         let str = "\(pre)\(line)\(content ?? "nil")\n"
         let result = NSMutableAttributedString(string: str, attributes: self.attributes)
-        let range = str.NS.range(of: pre)
-        if range.location != NSNotFound {
+        let range = str.range(of: pre)
+        if range != nil {
             result.addAttribute(NSForegroundColorAttributeName, value: color, range: range)
         }
         return result
@@ -29,8 +29,8 @@ class BaseRecordViewModel: NSObject {
         let header = "> \(prefex): \(content ?? "")\n"
         let result = NSMutableAttributedString(string: header, attributes: self.attributes)
         
-        let range = header.NS.range(of: prefex)
-        if range.location + range.length <= header.NS.length {
+        let range = header.range(of: prefex)
+        if range?.lowerBound + range.length <= header.length {
             result.addAttributes([NSForegroundColorAttributeName: color], range: range)
         }
         return result

@@ -15,4 +15,20 @@ extension UIColor {
         let blue: CGFloat = CGFloat((hex & 0x0000FF)) / 255.0
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
+    
+    public class func niceBlack() -> UIColor {
+        return UIColor(red: 30.0/255.0, green: 32.0/255.0, blue: 40.0/255.0, alpha: 1)
+    }
+    
+    public class func niceDuckBlack() -> UIColor {
+        return UIColor(red: 20.0/255.0, green: 21.0/255.0, blue: 27.0/255.0, alpha: 1)
+    }
+    
+    public class func niceRed() -> UIColor {
+        return UIColor(red: 237.0/255.0, green: 66.0/255.0, blue: 82.0/255.0, alpha: 1)
+    }
+    
+    public class func niceJHSRed() -> UIColor {
+        return UIColor(red: 235.0/255.0, green: 0.0/255.0, blue: 18.0/255.0, alpha: 1)
+    }
 }

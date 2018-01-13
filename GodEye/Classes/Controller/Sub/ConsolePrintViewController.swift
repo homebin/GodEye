@@ -51,7 +51,7 @@ class ConsolePrintViewController: UIViewController {
             if result == true {
                 sself.recordTableView.reloadData()
             }
-            sself.recordTableView.es_stopPullToRefresh()
+            sself.recordTableView.es.stopPullToRefresh()
         }
         
         NotificationCenter.default.addObserver(self,
