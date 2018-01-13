@@ -8,7 +8,6 @@
 
 import Foundation
 import SQLite
-import AppBaseKit
 
 /// ORM protocol, variable and function which need implement
 protocol RecordORMProtocol: class {
