@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6706F9192009B56D00B04713 /* UIColor+GodEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706F9182009B56D00B04713 /* UIColor+GodEye.swift */; };
+		67A7D92E2009DD0100342E67 /* UIAlertView+GodEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A7D92D2009DD0100342E67 /* UIAlertView+GodEye.swift */; };
 		9EC3B5B01E8CD2230052EC57 /* GodEye.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC3B5AE1E8CD2230052EC57 /* GodEye.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9EC3B6051E8CD29C0052EC57 /* eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EC3B5B71E8CD29C0052EC57 /* eye@2x.png */; };
 		9EC3B6061E8CD29C0052EC57 /* eye@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EC3B5B81E8CD29C0052EC57 /* eye@3x.png */; };
@@ -102,6 +103,7 @@
 
 /* Begin PBXFileReference section */
 		6706F9182009B56D00B04713 /* UIColor+GodEye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+GodEye.swift"; sourceTree = "<group>"; };
+		67A7D92D2009DD0100342E67 /* UIAlertView+GodEye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertView+GodEye.swift"; sourceTree = "<group>"; };
 		9EC3B5AB1E8CD2230052EC57 /* GodEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GodEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC3B5AE1E8CD2230052EC57 /* GodEye.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodEye.h; sourceTree = "<group>"; };
 		9EC3B5AF1E8CD2230052EC57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				9EC3B5F31E8CD29C0052EC57 /* UIScreen+GodEye.swift */,
 				9EC3B5F41E8CD29C0052EC57 /* UIView+GodEye.swift */,
 				6706F9182009B56D00B04713 /* UIColor+GodEye.swift */,
+				67A7D92D2009DD0100342E67 /* UIAlertView+GodEye.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				9EC3B6151E8CD29C0052EC57 /* SettingController.swift in Sources */,
 				9EC3B6241E8CD29C0052EC57 /* LeakRecordModel+ORM.swift in Sources */,
 				9EC3B6191E8CD29C0052EC57 /* GodEye.swift in Sources */,
+				67A7D92E2009DD0100342E67 /* UIAlertView+GodEye.swift in Sources */,
 				9EC3B6161E8CD29C0052EC57 /* MonitorSystemType.swift in Sources */,
 				9EC3B6091E8CD29C0052EC57 /* ControlConfiguration.swift in Sources */,
 				9EC3B62A1E8CD29C0052EC57 /* UIWindow+GodEye.swift in Sources */,

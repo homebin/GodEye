@@ -143,13 +143,13 @@ extension NetworkRecordModel {
                 }
                 
                 if jsonString.hasSuffix(");") {
-                    let jsonStr = jsonString as NSString
+                    var jsonStr = jsonString as NSString
                     var range = jsonStr.range(of: "(")
                     if range.location != NSNotFound {
                         range.location += 1
                         range.length = jsonStr.length - range.location - 2  // removes parens and trailing semicolon
                         jsonStr = (jsonStr.substring(with: range)) as NSString
-                        let jsondata = jsonStr.data(using: String.Encoding.utf8)
+                        let jsondata = jsonStr.data(using: String.Encoding.utf8.rawValue)
                         self.receiveJSONData = self.json(from: jsondata)
                         
                     }
