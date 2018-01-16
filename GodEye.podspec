@@ -39,7 +39,7 @@ Automaticly display Log,Crash,Network,ANR,Leak,CPU,RAM,FPS,NetFlow,Folder and et
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-    spec.subspec 'Lite' do |lite|
+  s.subspec 'Lite' do |lite|
   # s.dependency 'AppBaseKit', '~> 0.2.2'
     lite.dependency 'Log4G', '~> 0.2.2'
     lite.dependency 'AppSwizzle', '~> 1.1.2'
@@ -57,5 +57,5 @@ Automaticly display Log,Crash,Network,ANR,Leak,CPU,RAM,FPS,NetFlow,Folder and et
     lite.dependency 'SQLite.swift', '~> 0.11.1'
     #s.dependency 'MJRefresh', '~> 3.1.12'
     lite.dependency 'ESPullToRefresh', '~> 2.6'
-    end
+  end
 end
