@@ -8,6 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GodEye'
+  s.ios.vendored_frameworks = 'Debug/GodEye.framework'
   s.version          = '2.0.0'
   s.summary          = 'Automaticly display Log,Crash,Network,ANR,Leak,CPU,RAM,FPS,NetFlow,Folder and etc with one line of code based on Swift. Just like God opened his eyes.'
 
@@ -39,23 +40,19 @@ Automaticly display Log,Crash,Network,ANR,Leak,CPU,RAM,FPS,NetFlow,Folder and et
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-  s.subspec 'Lite' do |lite|
-  # s.dependency 'AppBaseKit', '~> 0.2.2'
-    lite.dependency 'Log4G', '~> 0.2.2'
-    lite.dependency 'AppSwizzle', '~> 1.1.2'
-    lite.dependency 'AssistiveButton', '~> 1.1.2'
+  s.dependency 'Log4G', '~> 0.2.2'
+  s.dependency 'AppSwizzle', '~> 1.1.2'
+  s.dependency 'AssistiveButton', '~> 1.1.2'
 
-    lite.dependency 'ASLEye', '~> 1.1.1'
-    lite.dependency 'CrashEye', '~> 1.1.2'
-    lite.dependency 'ANREye', '~> 1.1.1'
-    lite.dependency 'SystemEye', '~> 0.2.2'
-    lite.dependency 'NetworkEye.swift', '~> 1.1.3'
-    lite.dependency 'LeakEye', '~> 1.1.3'
+    s.dependency 'ASLEye', '~> 1.1.1'
+    s.dependency 'CrashEye', '~> 1.1.2'
+    s.dependency 'ANREye', '~> 1.1.1'
+    s.dependency 'SystemEye', '~> 0.2.2'
+    s.dependency 'NetworkEye.swift', '~> 1.1.3'
+    s.dependency 'LeakEye', '~> 1.1.3'
 
-    lite.dependency 'FileBrowser', '~> 0.2.0'
-    lite.dependency 'SwViewCapture', '~> 1.0.6'
-    lite.dependency 'SQLite.swift', '~> 0.11.1'
-    #s.dependency 'MJRefresh', '~> 3.1.12'
-    lite.dependency 'ESPullToRefresh', '~> 2.6'
-  end
+    s.dependency 'FileBrowser', '~> 0.2.0'
+    s.dependency 'SwViewCapture', '~> 1.0.6'
+    s.dependency 'SQLite.swift', '~> 0.11.1'
+    s.dependency 'ESPullToRefresh', '~> 2.6'
 end
