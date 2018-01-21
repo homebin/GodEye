@@ -11,6 +11,7 @@ import AssistiveButton
 import AppSwizzle
 
 extension UIWindow {
+    var btn: AssistiveButton?
     
     fileprivate class var hookWindow: UIWindow? {
         get {
@@ -22,6 +23,10 @@ extension UIWindow {
     }
     
     func makeEye(with configuration:Configuration) {
+        if btn != nil {
+            btn.bringSubview(toFront: self)
+        }
+        
         GodEyeController.shared.configuration = configuration
         
         var rect = CGRect(x: self.frame.size.width - 48, y: self.frame.size.height - 160, width: 48, height: 48)
@@ -34,8 +39,8 @@ extension UIWindow {
             // for carthage, image in framework
             image = UIImage(named: "eye", in: Bundle(for: GodEyeController.classForCoder()), compatibleWith: nil)
         }
-        let btn = AssistiveButton(frame: rect, normalImage: image!)
-        btn.didTap = { () -> () in
+        btn = AssistiveButton(frame: rect, normalImage: image!)
+        btn?.didTap = { () -> () in
             if GodEyeController.shared.showing {
                 GodEyeController.hide()
             }else {
