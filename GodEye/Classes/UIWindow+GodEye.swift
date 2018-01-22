@@ -61,7 +61,7 @@ extension UIWindow {
         }
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
-            self.addSubview(btn!)
+            self.addSubview(self.btn!)
         }
         
         UIWindow.hookWindow = self
