@@ -10,6 +10,7 @@
 		6706F9192009B56D00B04713 /* UIColor+GodEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6706F9182009B56D00B04713 /* UIColor+GodEye.swift */; };
 		67A7D92E2009DD0100342E67 /* UIAlertView+GodEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A7D92D2009DD0100342E67 /* UIAlertView+GodEye.swift */; };
 		67A7D9302009DFA400342E67 /* AppPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A7D92F2009DFA400342E67 /* AppPath.swift */; };
+		67CCFBCB20158A9400ADF23B /* AssistiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CCFBCA20158A9400ADF23B /* AssistiveButton.swift */; };
 		9EC3B5B01E8CD2230052EC57 /* GodEye.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC3B5AE1E8CD2230052EC57 /* GodEye.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9EC3B6051E8CD29C0052EC57 /* eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EC3B5B71E8CD29C0052EC57 /* eye@2x.png */; };
 		9EC3B6061E8CD29C0052EC57 /* eye@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EC3B5B81E8CD29C0052EC57 /* eye@3x.png */; };
@@ -106,6 +107,7 @@
 		6706F9182009B56D00B04713 /* UIColor+GodEye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+GodEye.swift"; sourceTree = "<group>"; };
 		67A7D92D2009DD0100342E67 /* UIAlertView+GodEye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertView+GodEye.swift"; sourceTree = "<group>"; };
 		67A7D92F2009DFA400342E67 /* AppPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPath.swift; sourceTree = "<group>"; };
+		67CCFBCA20158A9400ADF23B /* AssistiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistiveButton.swift; sourceTree = "<group>"; };
 		9EC3B5AB1E8CD2230052EC57 /* GodEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GodEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC3B5AE1E8CD2230052EC57 /* GodEye.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodEye.h; sourceTree = "<group>"; };
 		9EC3B5AF1E8CD2230052EC57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 			children = (
 				9EC3B5F61E8CD29C0052EC57 /* Monitor */,
 				9EC3B5FA1E8CD29C0052EC57 /* RecordTableView */,
+				67CCFBCA20158A9400ADF23B /* AssistiveButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 				9EC3B62E1E8CD29C0052EC57 /* UITableView+.swift in Sources */,
 				9EC3B6361E8CD29C0052EC57 /* MonitorSysNetFlowView.swift in Sources */,
 				9EC3B62F1E8CD29C0052EC57 /* UITableViewCell+.swift in Sources */,
+				67CCFBCB20158A9400ADF23B /* AssistiveButton.swift in Sources */,
 				9EC3B6251E8CD29C0052EC57 /* LogRecordModel+ORM.swift in Sources */,
 				9EC3B6391E8CD29C0052EC57 /* ANRRecordViewModel.swift in Sources */,
 				6706F9192009B56D00B04713 /* UIColor+GodEye.swift in Sources */,

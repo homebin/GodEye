@@ -42,7 +42,7 @@ Automaticly display Log,Crash,Network,ANR,Leak,CPU,RAM,FPS,NetFlow,Folder and et
 
   s.dependency 'Log4G', '~> 0.2.2'
   s.dependency 'AppSwizzle', '~> 1.1.2'
-  s.dependency 'AssistiveButton', '~> 1.1.2'
+  # s.dependency 'AssistiveButton', '~> 1.1.2'
 
     s.dependency 'ASLEye', '~> 1.1.1'
     s.dependency 'CrashEye', '~> 1.1.2'

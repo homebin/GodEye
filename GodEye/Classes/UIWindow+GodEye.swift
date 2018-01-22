@@ -10,7 +10,6 @@ import Foundation
 import AssistiveButton
 import AppSwizzle
 
-private var ASSISTIVE_ID_NUMBER_PROPERTY = 0
 extension UIWindow {
     var btn: AssistiveButton? {
         get{
@@ -71,8 +70,6 @@ extension UIWindow {
         alter = #selector(UIResponder.app_motionEnded(_:with:))
         UIResponder.swizzleInstanceMethod(origSelector: orig, toAlterSelector: alter)
     }
-    
-    
 }
 
 extension UIResponder {
