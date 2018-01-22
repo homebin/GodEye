@@ -14,14 +14,10 @@ private var ASSISTIVE_ID_NUMBER_PROPERTY = 0
 extension UIWindow {
     var btn: AssistiveButton? {
         get{
-            var result = objc_getAssociatedObject(self, &ASSISTIVE_ID_NUMBER_PROPERTY) as? AssistiveButton
-            if result == nil {
-                return nil
-            }
-            return result!
+            return objc_getAssociatedObject(self, &Define.Key.Associated.AssistiveButton) as? AssistiveButton
         }
         set{
-            objc_setAssociatedObject(self, &ASSISTIVE_ID_NUMBER_PROPERTY, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_ASSIGN)
+            objc_setAssociatedObject(self, &Define.Key.Associated.AssistiveButton, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_ASSIGN)
         }
     }
     
