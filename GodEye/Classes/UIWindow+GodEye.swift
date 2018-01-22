@@ -15,7 +15,7 @@ extension UIWindow {
             return objc_getAssociatedObject(self, &Define.Key.Associated.AssistiveButton) as? AssistiveButton
         }
         set{
-            objc_setAssociatedObject(self, &Define.Key.Associated.AssistiveButton, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_ASSIGN)
+            objc_setAssociatedObject(self, &Define.Key.Associated.AssistiveButton, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
@@ -54,7 +54,7 @@ extension UIWindow {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) {
             self.addSubview(self.btn!)
         }
         
