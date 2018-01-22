@@ -21,7 +21,7 @@ extension UIWindow {
             return result!
         }
         set{
-            objc_setAssociatedObject(self, &ASSISTIVE_ID_NUMBER_PROPERTY, newValue, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
+            objc_setAssociatedObject(self, &ASSISTIVE_ID_NUMBER_PROPERTY, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_ASSIGN)
         }
     }
     
@@ -36,7 +36,7 @@ extension UIWindow {
     
     func makeEye(with configuration:Configuration) {
         if btn != nil {
-            btn.bringSubview(toFront: self)
+            btn!.bringSubview(toFront: self)
         }
         
         GodEyeController.shared.configuration = configuration
@@ -61,7 +61,7 @@ extension UIWindow {
         }
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
-            self.addSubview(btn)
+            self.addSubview(btn!)
         }
         
         UIWindow.hookWindow = self
