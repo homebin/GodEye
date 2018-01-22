@@ -30,7 +30,7 @@ extension UIWindow {
     
     func makeEye(with configuration:Configuration) {
         if btn != nil {
-            btn!.bringSubview(toFront: self)
+            self.bringSubview(toFront: btn!)
             return
         }
         
