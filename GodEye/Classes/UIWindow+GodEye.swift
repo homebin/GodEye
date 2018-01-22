@@ -31,6 +31,7 @@ extension UIWindow {
     func makeEye(with configuration:Configuration) {
         if btn != nil {
             btn!.bringSubview(toFront: self)
+            return
         }
         
         GodEyeController.shared.configuration = configuration
