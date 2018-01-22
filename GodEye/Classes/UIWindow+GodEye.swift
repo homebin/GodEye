@@ -16,7 +16,7 @@ extension UIWindow {
         get{
             var result = objc_getAssociatedObject(self, &ASSISTIVE_ID_NUMBER_PROPERTY) as? AssistiveButton
             if result == nil {
-                return ""
+                return nil
             }
             return result!
         }
