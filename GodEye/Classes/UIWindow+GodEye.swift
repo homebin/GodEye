@@ -10,8 +10,20 @@ import Foundation
 import AssistiveButton
 import AppSwizzle
 
+private var ASSISTIVE_ID_NUMBER_PROPERTY = 0
 extension UIWindow {
-    var btn: AssistiveButton?
+    var btn: AssistiveButton? {
+        get{
+            var result = objc_getAssociatedObject(self, &ASSISTIVE_ID_NUMBER_PROPERTY) as? AssistiveButton
+            if result == nil {
+                return ""
+            }
+            return result!
+        }
+        set{
+            objc_setAssociatedObject(self, &ASSISTIVE_ID_NUMBER_PROPERTY, newValue, objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN))
+        }
+    }
     
     fileprivate class var hookWindow: UIWindow? {
         get {
