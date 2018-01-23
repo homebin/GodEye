@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Log4G
 
 class ViewController: UIViewController {
     

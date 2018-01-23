@@ -9,7 +9,6 @@
 import Foundation
 import ASLEye
 import NetworkEye
-import Log4G
 import CrashEye
 import ANREye
 import LeakEye

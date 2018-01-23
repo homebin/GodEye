@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Log4G
 
 class DemoModel: NSObject {
     
