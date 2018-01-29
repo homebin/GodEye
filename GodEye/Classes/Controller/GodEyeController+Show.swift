@@ -32,7 +32,7 @@ extension GodEyeController {
     
     var window: UIWindow? {
         get{
-            return objc_getAssociatedObject(self, &Define.Key.Associated.KeyWindow) as? AssistiveButton
+            return objc_getAssociatedObject(self, &Define.Key.Associated.KeyWindow) as? UIWindow
         }
         set{
             objc_setAssociatedObject(self, &Define.Key.Associated.KeyWindow, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)

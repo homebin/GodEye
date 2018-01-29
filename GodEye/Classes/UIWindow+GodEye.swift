@@ -78,9 +78,9 @@ extension UIResponder {
         if control.enabled && control.shakeToShow() {
             if event?.type == UIEventType.motion && event?.subtype == UIEventSubtype.motionShake {
                 if GodEyeController.shared.showing {
-                    GodEyeController.hide(window: GodEyeController.shared.window)
+                    GodEyeController.hide(window: GodEyeController.shared.window!)
                 }else {
-                    GodEyeController.show(window: GodEyeController.shared.window)
+                    GodEyeController.show(window: GodEyeController.shared.window!)
                 }
             }
         }
@@ -156,9 +156,9 @@ extension UIWindow {
     
     private func handleConsole(show:Bool,hide:Bool) {
         if show {
-            GodEyeController.show(window: GodEyeController.shared.window)
+            GodEyeController.show(window: GodEyeController.shared.window!)
         }else if hide {
-            GodEyeController.hide(window: GodEyeController.shared.window)
+            GodEyeController.hide(window: GodEyeController.shared.window!)
         }
     }
 }
