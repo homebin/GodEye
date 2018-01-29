@@ -30,6 +30,15 @@ extension GodEyeController {
         }
     }
     
+    var window: UIWindow? {
+        get{
+            return objc_getAssociatedObject(self, &Define.Key.Associated.KeyWindow) as? AssistiveButton
+        }
+        set{
+            objc_setAssociatedObject(self, &Define.Key.Associated.KeyWindow, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
     class func show(window: UIWindow) {
         self.shared.showConsole(window: window)
     }
@@ -40,6 +49,7 @@ extension GodEyeController {
     
     private func hideConsole(window: UIWindow) {
         if self.animating == false && self.view.superview != nil {
+            self.window = window
             window.findAndResignFirstResponder()
             
             self.animating = true
@@ -56,6 +66,7 @@ extension GodEyeController {
     
     private func showConsole(window: UIWindow) {
         if self.animating == false && self.view.superview == nil {
+            self.window = window
             window.findAndResignFirstResponder()
             
             self.view.frame = UIScreen.offscreenFrame()
@@ -90,12 +101,13 @@ extension GodEyeController {
 //        guard let superView = UIApplication.shared.mainWindow() else {
 //            return
 //        }
+        self.window = window
         window.addSubview(self.view)
         
         //bring AssistiveButton to front
-        for subview in superView.subviews {
+        for subview in window.subviews {
             if subview.isKind(of: AssistiveButton.classForCoder()) {
-                superView.bringSubview(toFront: subview)
+                window.bringSubview(toFront: subview)
             }
         }
     }

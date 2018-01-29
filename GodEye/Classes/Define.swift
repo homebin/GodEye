@@ -17,6 +17,7 @@ struct Define {
             static var Showing = "\(#file)+\(#line)"
             static var Tabbar = "\(#file)+\(#line)"
             static var AssistiveButton = "\(#file)+\(#line)"
+            static var KeyWindow = "\(#file)+\(#line)"
         }
         
     }
