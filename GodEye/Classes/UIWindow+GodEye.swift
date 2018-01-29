@@ -28,7 +28,7 @@ extension UIWindow {
         }
     }
     
-    func makeEye(with configuration:Configuration) {
+    func makeEye(with configuration:Configuration, window: UIWindow) {
         if btn != nil {
             self.bringSubview(toFront: btn!)
             return
@@ -49,9 +49,9 @@ extension UIWindow {
         btn = AssistiveButton(frame: rect, normalImage: image!)
         btn?.didTap = { () -> () in
             if GodEyeController.shared.showing {
-                GodEyeController.hide()
+                GodEyeController.hide(window: window)
             }else {
-                GodEyeController.show()
+                GodEyeController.show(window: window)
             }
         }
         

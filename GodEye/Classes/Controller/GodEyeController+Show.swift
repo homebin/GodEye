@@ -30,17 +30,17 @@ extension GodEyeController {
         }
     }
     
-    class func show() {
-        self.shared.showConsole()
+    class func show(window: UIWindow) {
+        self.shared.showConsole(window: window)
     }
     
-    class func hide() {
-        self.shared.hideConsole()
+    class func hide(window: UIWindow) {
+        self.shared.hideConsole(window: window)
     }
     
-    private func hideConsole() {
+    private func hideConsole(window: UIWindow) {
         if self.animating == false && self.view.superview != nil {
-            UIApplication.shared.mainWindow()?.findAndResignFirstResponder()
+            window.findAndResignFirstResponder()
             
             self.animating = true
             
@@ -54,12 +54,12 @@ extension GodEyeController {
         }
     }
     
-    private func showConsole() {
+    private func showConsole(window: UIWindow) {
         if self.animating == false && self.view.superview == nil {
-            UIApplication.shared.mainWindow()?.findAndResignFirstResponder()
+            window.findAndResignFirstResponder()
             
             self.view.frame = UIScreen.offscreenFrame()
-            self.setViewPlace()
+            self.setViewPlace(window: window)
             
             self.animating = true
             
@@ -86,11 +86,11 @@ extension GodEyeController {
         self.view.removeFromSuperview()
     }
     
-    private func setViewPlace() {
-        guard let superView = UIApplication.shared.mainWindow() else {
-            return
-        }
-        superView.addSubview(self.view)
+    private func setViewPlace(window: UIWindow) {
+//        guard let superView = UIApplication.shared.mainWindow() else {
+//            return
+//        }
+        window.addSubview(self.view)
         
         //bring AssistiveButton to front
         for subview in superView.subviews {

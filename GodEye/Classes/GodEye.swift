@@ -19,6 +19,6 @@ open class GodEye: NSObject {
             CommandRecordModel.create()
             LeakRecordModel.create()
         }
-        window.makeEye(with: configuration)
+        window.makeEye(with: configuration, window: window)
     }
 }
